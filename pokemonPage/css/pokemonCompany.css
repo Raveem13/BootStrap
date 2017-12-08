@@ -1,0 +1,56 @@
+body{
+    color: #5a5a5a;
+    background-color: bisque;
+}
+
+.navbar-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.carousel{
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+.carousel .item{
+   height: 500px; 
+}
+
+.carousel-inner > .item > img{
+    position: absolute;
+    height: 500px;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.team .col-lg-4{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team h2{
+    color: rgba(50,120,24,0.7);
+    
+}
+.team p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mickey{
+    padding-left: 50px;
+    padding-top: 60px;
+}
+.content{
+    padding-bottom:20px; 
+    padding-top: 20px;
+}
+
+footer{
+    margin: 0 35px;
+}

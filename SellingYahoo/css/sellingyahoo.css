@@ -1,0 +1,29 @@
+body{
+    
+}
+
+.nav-justified{
+    background-color: violet;
+    border-radius: 5px;
+}
+
+.nav-justified > li > a{
+    padding: 15px 0;
+    text-align: center;
+    color: darkviolet;
+    background-color: plum;
+}
+
+.jumbotron{
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn{
+    padding: 15px 25px;
+    font-size: 25px;
+}
+
+.centro{
+    text-align: 
+}

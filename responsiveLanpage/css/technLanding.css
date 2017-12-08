@@ -1,0 +1,77 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Shade');
+
+html,body {
+    height: 100%;
+    
+}
+
+
+.navbar-default .navbar-brand{
+    color: white;
+}
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1499242015907-fd91d5d02f13?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-default{
+    background-color: royalblue;
+    border-color: royalblue;
+}
+
+.fa-square-o,.fa-twitter{
+    color: white;
+}
+
+h1,p{
+    color: whitesmoke;
+}
+.centre{
+    text-align: center;
+    padding-top: 10%;
+}
+
+#login{
+    width:300px;
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px 10px 10px 10px;
+}
+
+
+.socialbtn>a {
+    color: white;
+}
+.btn-fb{
+    background-color: #3b599d;
+    
+}
+.btn-gl{
+    background-color: darkred;
+}
+.btn-tw{
+    background-color: #0084b4;
+/*    margin-left: 10px;*/
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: white;
+}
+
+
+/*tickey clock*/
+
+#clock{
+    font-size: 70px;
+    font-family: 'Bungee Shade', cursive;
+    color: #fff;
+}
+#date{
+    font-size: 20px;
+    font-family: 'Bungee Inline', cursive;
+    color: #fff;
+
+}
