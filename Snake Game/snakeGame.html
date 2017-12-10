@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+
+
+<canvas id="gameCanvas" width="625" height="625"></canvas>
+
+<h3 id="tst"> </h3>
+<script>
+    var canvas;
+    var canvasContext;
+    
+   
+    
+    
+    window.onload = function() {
+        canvas = document.getElementById('gameCanvas');
+        canvasContext = canvas.getContext('2d');
+        framerate = 5;
+        window.addEventListener('keydown', keyPush);
+        setInterval(game, 1000/framerate);
+        
+        
+    }
+    
+    
+    px=py=25;
+    gs=tc=25;
+    ax=ay=15;
+    xv=yv=0;
+    trail = [];
+    tail =5;
+    
+    function game(){
+        px+=xv;     //movement of python in x-direction  (next posn = initial psn + displacement)
+        py+=yv;     //movement of python in y-direction
+        
+        if(px<0){       //These lines limits the overflow of python                
+            px=tc-1;    //These lines limits the overflow of python        
+        }           
+        if(px>tc-1){    //These lines limits the overflow of python
+            px=0;       //These lines limits the overflow of python
+        }
+        if(py<0){       //These lines limits the overflow of python
+            py=tc-1;    //These lines limits the overflow of python
+        }               //These lines limits the overflow of python
+        if(py>tc-1){    //These lines limits the overflow of python
+            py=0;       //These lines limits the overflow of python
+        }               //These lines limits the overflow of python
+        
+        canvasContext.fillStyle='black';
+        canvasContext.fillRect(0,0,canvas.width,canvas.height)  
+        
+        canvasContext.fillStyle='lime';
+        for(var i=0; i<trail.length;i++){
+            canvasContext.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2,gs-2);
+//            console.log(trail[i].x,trail[i].y);
+//            console.log(trail.length);
+//            console.log(px,py);
+            if(trail[i].x == px && trail[i].y == py){
+                //console.log("tail reset to 5"); 
+                //tail resets to 5 when python moves in reverse direction
+                tail = 5;                               
+            }
+        }
+        
+        trail.push({x:px,y:py});  //pushes the x,y value of trail to px,py
+        while(trail.length>tail){
+            trail.shift();          //removes last box of tail
+            console.log("Trail length while pusing " + trail.length);
+        }
+        
+        if(ax == px && ay == py){
+            tail++;
+            ax=Math.floor(Math.random()*tc);
+            ay=Math.floor(Math.random()*tc);
+            console.log(trail.length);
+            console.log(tail);
+        }
+        
+        canvasContext.fillStyle='red';
+        canvasContext.fillRect(ax*gs,ay*gs,gs-2,gs-2);
+    }
+    
+    function keyPush(evt){
+        switch(evt.keyCode){
+            case 37:
+                xv=-1;yv=0;
+                break;
+            case 38:
+                xv=0;yv=-1;
+                break;
+            case 39:
+                xv=1;yv=0;
+                break;
+            case 40:
+                xv=0;yv=1;
+                break;
+        }
+    }
+
+    </script>
+    
+</html>
