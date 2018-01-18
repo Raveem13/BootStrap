@@ -86,21 +86,6 @@ function scrub(e){
     video.currentTime = scrubTime;
 }
 
-//function muteVideo(){
-////    const muteOpt = video.muted ? 'false' : 'true';
-////    video.muted = muteOpt;
-////    console.log(muteOpt);
-//    if(video.muted){
-//        video.muted = false;
-//        muteButton.textContent = '🔈';
-//    }
-//    else{
-//        video.muted = true;
-//        muteButton.textContent = '🔇';
-//    }
-//    console.log(video.volume);
-//        video.volume = 0;
-//}
 
 function updateMutebtn(){
     console.log('Update mute button');
