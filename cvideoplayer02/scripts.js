@@ -132,13 +132,4 @@ muteButton.addEventListener('click',() => {mute = !mute;
                                           });
                                            
 
-// For making video full screen
-function fullScreen(e){
-//player.style.height = 100%;
-//player.style.width = 100%;
-    console.log(player.propertyName);
-}
-
-//fullScrBtn.addEventListener('click',fullScreen);
-
 
